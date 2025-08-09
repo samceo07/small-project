@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Best Friend</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f6;
+    color: #4a3b47;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  /* Confetti background */
+  #confetti {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+  }
+
+  /* Opening screen */
+  #opening {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  #opening h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #ff6fa3;
+    margin-bottom: 20px;
+  }
+  #startBtn {
+    padding: 14px 28px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(90deg, #ff6fa3, #ff9ccf);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  #startBtn:hover {
+    transform: scale(1.05);
+  }
+
+  /* Cards */
+  #cardsContainer {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover, .card:active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: #ff6fa3;
+    margin: 10px 0 0;
+  }
+  .card p {
+    padding: 0 10px 15px;
+    font-size: 14px;
+    color: #4a3b47;
+  }
+
+  /* Note section */
+  .note {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff6fa;
+    border: 2px solid #ffb6d9;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: #a23c6d;
+    box-shadow: 0 6px 20px rgba(255,105,180,0.1);
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    #cardsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Confetti Canvas -->
+<canvas id="confetti"></canvas>
+
+<!-- Music -->
+<audio id="bgMusic" loop>
+   <source src="Abhi Na Jao Chhod Kar  Rocky Aur Rani Kii Prem Kahaanii  Ranveer  Alia  Pritam  Shashwat-[AudioTrimmer.com].mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- Opening screen -->
+<div id="opening">
+  <h1>Even if miles come between us, my heart will always walk beside yours 💖</h1>
+  <button id="startBtn">Click to Begin 🌸</button>
+</div>
+
+<!-- Cards -->
+<div id="cardsContainer">
+  <div class="card">
+    <img src="https://i.ibb.co/LdqQNygb/hfl85zkl7yi51.webp" alt="hfl85zkl7yi51" border="0">
+    <h3>Yui & Mio</h3>
+    <p>Like music to the soul, you make my days brighter.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ibb.co/Kj72NR26/download.jpg" alt="download" border="0">
+    <h3>Madoka & Sayaka</h3>
+    <p>Through battles and fears, friendship is our magic.</p>
+  </div>
+  <div class="card">
+   <img src="https://i.ibb.co/7xSMny9W/I-cant-believe-you-pulled-it-off.jpg" alt="I-cant-believe-you-pulled-it-off" border="0">
+    <h3>Chihiro & Lin</h3>
+    <p>Even in strange worlds, we find comfort in each other.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ibb.co/Kc4Kmd87/E2-Db-EGt-WUAIc4y1.jpg" alt="E2-Db-EGt-WUAIc4y1" border="0">
+    <h3>Mikasa & Sasha</h3>
+    <p>From laughter to tears, you’ve been my shield and joy.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ibb.co/Q7NnSwSL/ab67706c0000da841964ccdfae334b393bd0e8b3.jpg" alt="ab67706c0000da841964ccdfae334b393bd0e8b3" border="0">
+    <h3>Nana & Hachi</h3>
+    <p>Different worlds, same heart — that’s us.</p>
+  </div>
+</div>
+
+<!-- Note Section -->
+<div class="note">
+  You are more than just a friend—you are family, a part of my soul that I’ll carry with me always. 
+  No matter how far the distance grows, remember that we are forever connected, and we will always be by your side. 
+  The hugs we share, the laughter and tears, no one else can ever replace that warmth and love. 
+  You complete a piece of me that no one else ever could, and that bond is unbreakable. 
+  Even when we’re apart, my heart is with you, holding you close. 
+  We may not always be near, but family isn’t about proximity—it’s about being there, through every high and low, always and forever. 
+  You are loved beyond words, and I will miss you more than you know.
+</div>
+
+<script>
+  const startBtn = document.getElementById('startBtn');
+  const cards = document.getElementById('cardsContainer');
+  const opening = document.getElementById('opening');
+  const music = document.getElementById('bgMusic');
+
+  startBtn.addEventListener('click', () => {
+    opening.style.display = 'none';
+    cards.style.display = 'flex';
+    document.querySelector('.note').style.display = 'block';
+    music.play();
+  });
+
+  // Confetti animation
+  const confetti = document.getElementById('confetti');
+  const ctx = confetti.getContext('2d');
+  let W = window.innerWidth;
+  let H = window.innerHeight;
+  confetti.width = W;
+  confetti.height = H;
+
+  const pieces = Array.from({length: 100}, () => ({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    r: Math.random() * 6 + 4,
+    d: Math.random() * 50 + 20,
+    color: ["#ff6fa3","#ffd6ea","#ffd6a5","#e7f5ff","#c6f7e2"][Math.floor(Math.random()*5)],
+    vy: Math.random() * 2 + 1,
+    vx: (Math.random() - 0.5) * 2
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    pieces.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+    });
+    update();
+    requestAnimationFrame(draw);
+  }
+  function update() {
+    pieces.forEach(p => {
+      p.y += p.vy;
+      p.x += p.vx;
+      if (p.y > H) p.y = -10;
+      if (p.x > W) p.x = 0;
+      if (p.x < 0) p.x = W;
+    });
+  }
+  draw();
+
+  window.addEventListener('resize', () => {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    confetti.width = W;
+    confetti.height = H;
+  });
+</script>
+
+</body>
+</html>
